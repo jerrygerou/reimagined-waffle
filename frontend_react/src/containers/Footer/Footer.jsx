@@ -10,7 +10,7 @@ const Footer = () => {
     const [isFormSubmitted, setIsFormSubmitted] = useState(false);
     const [loading, setLoading] = useState(false);
 
-    const { username, email, message } = formData;
+    const { name, email, message } = formData;
 
     const handleChangeInput = (e) => {
         const { name, value } = e.target;
@@ -22,10 +22,12 @@ const Footer = () => {
 
         const contact = {
             _type: 'contact',
-            name: formData.username,
-            email: formData.email,
-            message: formData.message,
+            name: name,
+            email: email,
+            message: message,
         };
+
+        console.log(contact)
 
         client.create(contact)
             .then(() => {
@@ -37,7 +39,7 @@ const Footer = () => {
 
     return (
         <>
-            <h2 className="head-text">Take a coffee & chat with me</h2>
+            <h2 className="head-text"><span>Chat</span> with me</h2>
 
             <div className="app__footer-cards">
                 <div className="app__footer-card ">
@@ -48,7 +50,7 @@ const Footer = () => {
             {!isFormSubmitted ? (
                 <div className="app__footer-form app__flex">
                     <div className="app__flex">
-                        <input className="p-text" type="text" placeholder="Your Name" name="username" value={username} onChange={handleChangeInput} />
+                        <input className="p-text" type="text" placeholder="Your Name" name="name" value={name} onChange={handleChangeInput} />
                     </div>
                     <div className="app__flex">
                         <input className="p-text" type="email" placeholder="Your Email" name="email" value={email} onChange={handleChangeInput} />
