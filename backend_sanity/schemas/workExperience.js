@@ -3,8 +3,8 @@ export default {
     title:'Work Experience',
     type:'document',
     fields:[
-           {name:'name',
-               title:'name',
+           {name:'title',
+               title:'Title',
                type:'string'
             },
             {
@@ -15,7 +15,8 @@ export default {
             {
                 name:'desc',
                 title:'Desc',
-                type:'string'
+                type: 'array',
+                of: [{type: 'block'}]
             }
     ]
 }

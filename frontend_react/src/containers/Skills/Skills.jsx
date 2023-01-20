@@ -4,11 +4,22 @@ import { Tooltip } from 'react-tooltip'
 
 import { AppWrap, MotionWrap } from '../../wrapper';
 import { urlFor, client } from '../../client';
+import BlockContent from "@sanity/block-content-to-react";
 import './Skills.scss';
 
 const Skills = () => {
     const [experiences, setExperiences] = useState([]);
     const [skills, setSkills] = useState([]);
+
+    const serializers = {
+        types: {
+            code: (props) => (
+                <pre data-language={props.node.language}>
+        <code>{props.node.code}</code>
+      </pre>
+            ),
+        },
+    }
 
     useEffect(() => {
         const query = '*[_type == "experiences"]';
@@ -25,7 +36,7 @@ const Skills = () => {
 
     return (
         <>
-            <h2 className="head-text">Skills & Experiences</h2>
+            <h2 className="head-text">Skills<span> & </span>Experiences</h2>
 
             <div className="app__skills-container">
                 <motion.div className="app__skills-list">
@@ -66,7 +77,7 @@ const Skills = () => {
                                             data-for={work.name}
                                             key={work.name}
                                         >
-                                            <h4 className="bold-text">{work.name}</h4>
+                                            <h4 className="bold-text">{work.title}</h4>
                                             <p className="p-text">{work.company}</p>
                                         </motion.div>
                                         <Tooltip
@@ -75,7 +86,7 @@ const Skills = () => {
                                             arrowColor="#fff"
                                             className="skills-tooltip"
                                         >
-                                            {work.desc}
+                                        <BlockContent blocks={work.desc} serializers={serializers} />
                                         </Tooltip>
                                     </>
                                 ))}

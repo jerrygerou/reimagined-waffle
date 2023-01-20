@@ -24,7 +24,7 @@
   justify-content: flex-start;
   align-items: flex-start;
 
-  margin-right: 5rem;
+  margin-right: 2rem;
 
   @media screen and (max-width: 900px) {
     margin-right: 0;
@@ -118,6 +118,7 @@
     }
 
     p {
+      font-size: 1em;
       font-weight: 400;
       color: var(--gray-color);
       margin-top: 5px;
@@ -126,7 +127,7 @@
 }
 
 .app__skills-exp-year {
-  margin-right: 3rem;
+  margin-right: 1.2rem;
 
   p {
     font-weight: 800;
@@ -139,13 +140,13 @@
 }
 
 .skills-tooltip {
-  max-width: 300px !important;
+  max-width: 400px !important;
   background-color: var(--white-color) !important;
   box-shadow: 0 0 25px rgba(0, 0, 0, 0.1) !important;
   border-radius: 5px !important;
   padding: 1rem !important;
   color: var(--gray-color) !important;
-  text-align: center !important;
+  text-align: right !important;
   line-height: 1.5 !important;
   opacity: 1 !important;
 

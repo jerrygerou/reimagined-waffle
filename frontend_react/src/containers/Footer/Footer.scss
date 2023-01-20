@@ -119,7 +119,9 @@
     cursor: pointer;
 
     &:hover {
-      background-color: #2430af;
+      color: var(--secondary-color);
+      background-color: var(--white-color);
+      outline-style: solid;
     }
   }
 

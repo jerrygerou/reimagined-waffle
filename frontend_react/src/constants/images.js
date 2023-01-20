@@ -14,15 +14,20 @@ import about03 from '../assets/about03.png';
 import about04 from '../assets/about04.png';
 
 import profile from '../assets/profile.png';
+import profile2 from '../assets/profile2.png';
 import logo from '../assets/logo.png';
 
 import programmer from '../assets/programmer.png';
 import artist from '../assets/artist.png';
 import writer from '../assets/writer.png';
+import favicon from '../assets/favicon.ico';
 
 import circle from '../assets/circle.png';
+import ruby from '../assets/ruby.png';
 
-export default {
+import keyboard from '../assets/keyboard.png';
+
+const images = {
     email,
     api,
     css,
@@ -37,9 +42,14 @@ export default {
     about03,
     about04,
     profile,
+    profile2,
     logo,
     programmer,
     artist,
     writer,
-    circle
-};
+    circle,
+    ruby,
+    favicon,
+    keyboard
+}
+export default images;
