@@ -29,7 +29,7 @@ const Header = () => {
                         <span>👋</span>
                         <div style={{ marginLeft: 20 }}>
                             <p className="p-text">Hello, my name is</p>
-                            <h1 className="head-text">Jerry</h1>
+                            <h1 className="head-text" style={{ marginTop: 0 }}>Jerry</h1>
                         </div>
                     </div>
 
