@@ -41,12 +41,12 @@ const Footer = () => {
         <>
             <h2 className="head-text"><span>Chat</span> with me</h2>
 
-            <div className="app__footer-cards">
-                <div className="app__footer-card ">
-                    <img src={images.email} alt="email" />
-                    <a href="mailto:jerrysgerou@gmail.com" className="p-text">Email me</a>
-                </div>
-            </div>
+            {/*<div className="app__footer-cards">*/}
+            {/*    <div className="app__footer-card ">*/}
+            {/*        <img src={images.email} alt="email" />*/}
+            {/*        <a href="mailto:jerrysgerou@gmail.com" className="p-text">Email me</a>*/}
+            {/*    </div>*/}
+            {/*</div>*/}
             {!isFormSubmitted ? (
                 <div className="app__footer-form app__flex">
                     <div className="app__flex">
