@@ -1,5 +1,6 @@
 {
   "dependencies": {
-    "@portabletext/react": "^2.0.1"
+    "@portabletext/react": "^2.0.1",
+    "jquery": "^3.6.3"
   }
 }
