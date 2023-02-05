@@ -1,6 +1,8 @@
 {
   "dependencies": {
     "@portabletext/react": "^2.0.1",
-    "jquery": "^3.6.3"
+    "groq": "^3.2.6",
+    "jquery": "^3.6.3",
+    "netlify": "^13.1.2"
   }
 }
