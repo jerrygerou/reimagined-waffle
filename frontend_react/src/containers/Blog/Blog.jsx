@@ -27,8 +27,21 @@ const Blog = () => {
         client.fetch(query).then((data) => {
             setPosts(data);
         });
+
     }, []);
 
+    const postShows = {};
+    for (var i = 0; i < posts.length; i++) {
+        console.log(postShows[i]);
+        //Do something
+    }
+
+    function showHidePost(_id, show) {
+        console.log(postShows)
+        // console.log(postShows[_id])
+        postShows[_id] = !show;
+        // console.log(postShows[_id])
+    }
 
     return (
         <>
@@ -41,9 +54,8 @@ const Blog = () => {
                                 <li key={_id}>
                                     {title}&nbsp;
                                     ({new Date(publishedAt).toDateString()}) &nbsp;
-                                    <a href={'/posts/' + _id}>
-                                        expand
-                                    </a>
+                                    <button onClick={showHidePost(_id, false)} key={_id}>I am a button</button>
+                                    {/*<a onClick={showHidePost(_id)}>hello</a>*/}
                                 </li>
                             )
                     )}
