@@ -39,12 +39,12 @@ const Art = () => {
         <>
             <h2 className="head-text">My <span>Art</span> Portfolio</h2>
 
-            <div className="app__work-filter">
+            <div className="app__art-filter">
                 {['painting', 'drawing', 'photography', 'digital', 'all'].map((item, index) => (
                     <div
                         key={index}
                         onClick={() => handleArtFilter(item)}
-                        className={`app__work-filter-item app__flex p-text ${activeFilter === item ? 'item-active' : ''}`}
+                        className={`app__art-filter-item app__flex p-text ${activeFilter === item ? 'item-active' : ''}`}
                     >
                         {item}
                     </div>
@@ -54,27 +54,27 @@ const Art = () => {
             <motion.div
                 animate={animateCard}
                 transition={{ duration: 0.5, delayChildren: 0.5 }}
-                className="app__work-portfolio"
+                className="app__art-portfolio"
             >
                 {filterArt.map((art, index) => (
-                    <div className="app__work-item app__flex" key={index}>
+                    <div className="app__art-item app__flex" key={index}>
                         <div
-                            className="app__work-img app__flex"
+                            className="app__art-img app__flex"
                         >
                             <img src={urlFor(art.imgUrl)} alt={art.name} />
                             <motion.div
-                                whileHover={{ opacity: [0, 1] }}
+                                whileHover={{ opacity: [0] }}
                                 transition={{ duration: 0.25, ease: 'easeInOut', staggerChildren: 0.5 }}
-                                className="app__work-hover app__flex"
+                                className="app__art-hover app__flex"
                             >
                             </motion.div>
                         </div>
 
-                        <div className="app__work-content app__flex">
+                        <div className="app__art-content app__flex">
                             <h4 className="bold-text">{art.title}</h4>
                             <p className="p-text" style={{ marginTop: 10 }}>{art.description}</p>
 
-                            <div className="app__work-tag app__flex">
+                            <div className="app__art-tag app__flex">
                                 <p className="p-text">{art.tags[0]}</p>
                             </div>
                         </div>

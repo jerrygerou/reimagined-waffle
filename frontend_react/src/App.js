@@ -3,7 +3,6 @@ import './App.scss';
 import { About, Footer, Header, Skills, Art, Work } from './containers';
 import { Navbar } from './components';
 import './App.scss';
-import $ from 'jquery';
 
 function App() {
     return (
