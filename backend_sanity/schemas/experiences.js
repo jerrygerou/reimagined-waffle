@@ -6,7 +6,12 @@ export default{
         {
             name:'year',
             title:'Year',
-            type:'string'
+            type:'string',
+        },
+        {
+            name: 'rank',
+            title: 'Ranking Order',
+            type: 'number'
         },
         {
             name:'works',
