@@ -8,6 +8,15 @@ import './Navbar.scss';
 const Navbar = () => {
     const [toggle, setToggle] = useState(false);
 
+    const navItems = {
+        'home': 'home',
+        'about': 'about',
+        'tech projects': 'work',
+        'experience': 'skills',
+        'art': 'art',
+        'contact': 'contact'
+    };
+
     return (
         <nav className="app__navbar">
             <a href="/#home">
@@ -16,10 +25,10 @@ const Navbar = () => {
                 </div>
             </a>
             <ul className="app__navbar-links">
-                {['home', 'about', 'work', 'skills', 'art', 'contact'].map((item) => (
+                {Object.keys(navItems).map((item) => (
                     <li className="app__flex p-text" key={`link-${item}`}>
                         <div />
-                        <a href={`/#${item}`}>{item}</a>
+                        <a href={`/#${navItems[item]}`}>{item}</a>
                     </li>
                 ))}
             </ul>
