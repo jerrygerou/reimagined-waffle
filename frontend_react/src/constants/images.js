@@ -15,6 +15,7 @@ import about04 from '../assets/about04.png';
 
 import profile from '../assets/profile.png';
 import profile2 from '../assets/profile2.png';
+import profile3 from '../assets/profile3.png';
 import logo from '../assets/logo.png';
 
 import programmer from '../assets/programmer.png';
@@ -43,6 +44,7 @@ const images = {
     about04,
     profile,
     profile2,
+    profile3,
     logo,
     programmer,
     artist,
